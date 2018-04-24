@@ -11,9 +11,9 @@ app.use(bodyParser.json())
 app.use(cors())
 
 // Routes
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
   res.send({
-    mesaje: 'Up and running!'
+    mesaje: `If your email is ${req.body.email}, then you win! Hoooraaay`
   })
 })
 
